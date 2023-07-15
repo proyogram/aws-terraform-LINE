@@ -4,8 +4,8 @@
 #   tr_lambda-invoke-arn = module.lambda.tr_lambda-invoke-arn
 # }
 
-module "running_ec2_with_line" {
-  source = "./modules/running_ec2_with_line"
+module "stop_running_ec2" {
+  source = "./modules/stop_running_ec2"
   prefix = "tf-01-notice-running-ec2-with-line"
   secret_id_key = "LINE_ACCESS_TOKEN_STOP_EC2"
 }

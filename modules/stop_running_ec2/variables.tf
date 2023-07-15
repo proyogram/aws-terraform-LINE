@@ -5,4 +5,5 @@ variable "prefix" {
 
 variable "secret_id_key"{
   type        = string
+  description = "Secrets ManagerからLINEのアクセストークンを取ってくるためのシークレットキー"
 }
