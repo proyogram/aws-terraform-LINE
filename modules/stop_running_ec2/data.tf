@@ -2,7 +2,7 @@
 data "archive_file" "archieve_lambda" {
   type        = "zip"
   source_dir  = "${path.module}/lambda_src"
-  output_path = "${path.module}/lambda_src/lambda.zip"
+  output_path = "${path.module}/lambda_src_zip/lambda.zip"
 }
 
 # policy関連のdata
