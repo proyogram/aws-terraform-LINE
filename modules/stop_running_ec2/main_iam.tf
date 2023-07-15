@@ -1,6 +1,6 @@
 # lambda用のiamロールを定義
 resource "aws_iam_role" "lambda" {
-  name               = "${var.prefix}_main"
+  name               = "${var.prefix}_role_for_lambda"
   assume_role_policy = data.aws_iam_policy_document.assume_lambda.json
   inline_policy {
     name   = "${var.prefix}_inline_policy_for_lambda"
