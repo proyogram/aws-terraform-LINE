@@ -8,7 +8,7 @@ resource "aws_lambda_function" "main" {
   timeout          = 30
   environment {
     variables = {
-      SECRET_ID_KEY = var.secret_id_key
+      SECRET_ID_KEY = var.secret_id_key_access_token
     }
   }
 }
