@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 terraform {
-  required_version = ">= 0.11.0"
+  required_version = ">= 1.4.0"
   backend "s3" {
     bucket         = "tf-state-backend-wakatay"
     region         = "ap-northeast-1"
