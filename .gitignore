@@ -1,6 +1,8 @@
+# .gitinore初期設定値
 *~
 .DS_Store
 
+# terraform関連のファイル
 terraform.tfstate
 terraform.tfstate.backup
 .terraform
