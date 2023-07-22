@@ -10,10 +10,10 @@ variable "secret_id_key_access_token" {
 
 variable "secret_id_key_user_id" {
   type        = string
-  description = "Secrets ManagerからLINEのアクセストークンを取ってくるためのシークレットキー"
+  description = "Secrets ManagerからLINEのユーザIDを取ってくるためのシークレットキー"
 }
 
 variable "cron_notification_schedule" {
   type        = string
-  description = "Secrets ManagerからLINEのアクセストークンを取ってくるためのシークレットキー"
+  description = "EventBridgeを実行させるスケジュールをcronで定義"
 }
