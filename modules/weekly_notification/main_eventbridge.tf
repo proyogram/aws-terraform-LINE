@@ -3,7 +3,7 @@ resource "aws_scheduler_schedule_group" "main" {
 }
 
 resource "aws_scheduler_schedule" "main" {
-  name       = "${var.prefix}_event_weekly"
+  name       = "${var.prefix}-event-weekly"
   group_name = aws_scheduler_schedule_group.main.name
 
   state = "ENABLED"
