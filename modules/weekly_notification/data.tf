@@ -26,8 +26,7 @@ data "aws_iam_policy_document" "inline_lambda" {
   }
 }
 
-
-data "aws_iam_policy_document" "eventbridge_scheduler_assume" {
+data "aws_iam_policy_document" "assume_eventbridge_scheduler" {
   statement {
     effect = "Allow"
 
@@ -43,7 +42,8 @@ data "aws_iam_policy_document" "eventbridge_scheduler_assume" {
     }
   }
 }
-data "aws_iam_policy_document" "eventbridge_scheduler_custom" {
+
+data "aws_iam_policy_document" "inline_eventbridge_scheduler" {
   statement {
     effect = "Allow"
 
