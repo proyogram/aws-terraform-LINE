@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   required_version = ">= 1.4.0"
   backend "s3" {
-    bucket  = "tf-state-backend-wakatay"
+    bucket  = "tf-backend-proyogram"
     region  = "ap-northeast-1"
     key     = "LINE/terraform.tfstate"
     encrypt = true
