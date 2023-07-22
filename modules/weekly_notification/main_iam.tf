@@ -15,15 +15,12 @@ resource "aws_iam_role_policy_attachment" "lambda_execution_role" {
 }
 
 
-
-
+# eventbridge用のiamロールを定義
 resource "aws_iam_role" "eventbridge_scheduler" {
   name               = "${var.prefix}-role-for-eventbridge"
-  assume_role_policy = data.aws_iam_policy_document.eventbridge_scheduler_assume.json
-}
-
-resource "aws_iam_role_policy" "eventbridge_scheduler_custom" {
-  name   = "${var.prefix}-role-for-eventbridge"
-  role   = aws_iam_role.eventbridge_scheduler.name
-  policy = data.aws_iam_policy_document.eventbridge_scheduler_custom.json
+  assume_role_policy = data.aws_iam_policy_document.assume_eventbridge_scheduler.json
+  inline_policy {
+    name   = "${var.prefix}-inline-policy-for-eventbridge"
+    policy = data.aws_iam_policy_document.inline_eventbridge_scheduler.json
+  }
 }
