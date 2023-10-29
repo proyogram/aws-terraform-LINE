@@ -1,7 +1,7 @@
-import urllib.request
 import json
+import urllib.request
 import os
-import boto3
+
 
 def main(push_message):
     user_id =  os.environ["LINE_USER_ID"]
@@ -27,4 +27,8 @@ def main(push_message):
         # 以上の情報をRequestを用いてPush
         req = urllib.request.Request(url, message_body_json, headers)
         urllib.request.urlopen(req)
-    
+
+
+def lambda_handler(event, context):
+    msg = event["Records"][0]["Sns"]["Message"]
+    main(msg)
