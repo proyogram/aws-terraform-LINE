@@ -13,11 +13,6 @@ variable "line_access_token" {
   description = "Secrets ManagerからLINEのユーザIDを取ってくるためのシークレットキー"
 }
 
-variable "cron_notification_schedule" {
-  type        = string
-  description = "EventBridgeを実行させるスケジュールをcronで定義"
-}
-
 variable "limit_cost_usd" {
   type        = string
   description = "通知を行いたいコストの最大値。この値の50%, 70%, 80%, 100%を超えると通知がされる。"
