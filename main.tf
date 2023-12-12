@@ -1,9 +1,9 @@
 module "budgets_alert" {
-  source                     = "./modules/budgets_alert"
-  prefix                     = "tf-budgets-alert"
-  line_user_id               = var.LINE_USER_ID
-  line_access_token          = var.LINE_ACCESS_TOKEN
-  limit_cost_usd             = "5"
+  source            = "./modules/budgets_alert"
+  prefix            = "tf-budgets-alert"
+  line_user_id      = var.LINE_USER_ID
+  line_access_token = var.LINE_ACCESS_TOKEN
+  limit_cost_usd    = "5"
 }
 
 module "stop_running_ec2" {
