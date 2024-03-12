@@ -48,7 +48,6 @@ TF_VAR_LINE_ACCESS_TOKEN=<チャネルアクセストークン>
 8. 以上
 
 ※ API Gatewayが削除→再作成され場合、URLが変更される。その際は5~7の手順を再度実行する必要がある。（`チャネルアクセストークン`は変更されない。）
-
 ※ユーザIDは不要。
 
 ## 使用方法 - weekly_notification
@@ -56,5 +55,5 @@ TF_VAR_LINE_ACCESS_TOKEN=<チャネルアクセストークン>
 1. CLIを開き本リポジトリをcloneする。
 2. `$terraform plan`を実行。
 3. 取得した`ユーザID`、`チャネルアクセストークン`の設定
-4. plan結果が問題なければ、$`terraform apply`を実行。
+4. plan結果が問題なければ、`$terraform apply`を実行。
 5. 以上
