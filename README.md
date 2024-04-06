@@ -1,9 +1,12 @@
 # aws-terraform-LINE
 本リポジトリは、「AWS with LINEの構成」のterraformコードを管理している。
 
-## 事前準備
+## 前提
 
-`$aws configure`の credentials 設定は完了している前提
+本モジュールでは、terraformのtfstateファイルを保管するS3バケットを作成する必要がある。
+作成したS3バケット名をprovider.tfの`<BACKEND_BUCKET_NAME>`に設定する。
+
+## 事前準備
 
 ### tfstateファイルの格納先であるS3バケットの設定
 
